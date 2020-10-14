@@ -1,0 +1,10 @@
+In this test . I will exam memory layout and data in mem with gdb
+
+1. check struct
+2. check enum
+3. check union
+
+How data is save in memory ?
+
+with x command in gdb
+x/12xg <address>
