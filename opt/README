@@ -1,0 +1,10 @@
+TESTING FOR PASSING ARGUMENTS IN C
+
+
+1. normal argument
+    ./a.out -t 12 -v abcd
+    use getopt(argc, argv, <optstring>)
+
+2. long argument
+    ./a.out --add 12 --name abcdef
+
