@@ -1,0 +1,17 @@
+testing LOCK in Linux's file
+
+we can use fcntl to get "lock's status" and write "lock" to file
+
+this mechanism is used in communicate between process when they access to same files
+
+
+in this example:
+1. write_lock.c :
+    check lock status
+    if ( lock hasn't locked)
+        write lock to file with fcntl
+        keep log 100s . after the process terminated -> lock auto is freed
+    else
+        return message
+
+ 2. read lock check status and report status to user via printf func
