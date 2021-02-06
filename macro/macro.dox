@@ -1,0 +1,14 @@
+/*! \page macro About MACRO
+
+   ### intro about MACRO in C
+
+   MACRO is feature in C, they are processed during preprocesor time.
+
+   some MACRO we usually use are:
+   \code
+       #define , #pracma, #ifdef, #if , #else, #undef
+   \endcode
+   check full example here \include test_m.c
+
+
+*/
