@@ -14,7 +14,7 @@ clean:
 	rm -f $(LIB) $(OBJ) a.out
 
 a.out: main.c
-	$(CC) $^ -o $@ -lpthread
+	$(CC) $^ -o $@ -lpthread -g -O0
 
 test: a.out
 	LD_PRELOAD=./liboverwrite.so ./a.out

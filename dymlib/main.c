@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 #include <pthread.h>
 
@@ -31,7 +32,12 @@ int main(void)
     pthread_exit(NULL);
 #endif
     char a[10] = {0};
+    char *str1 = "strcpy";
+    char *str2 = "strncpy";
 
-    memcpy(a, "abc", 3);
+    memcpy(a, "memcpy", 3);
+    strcpy(a, str1);
+    strncpy(a, str2, 7);
+    puts(a);
 
 }
