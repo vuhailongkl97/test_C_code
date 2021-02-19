@@ -17,3 +17,18 @@ int rand(void)
     perror("faild find dsym\n");
     return 0;
 }
+
+void* memcpy(void* dest, void *src, size_t n)
+{
+    void* (*original_memcpy)(void *, void*, size_t);
+    original_memcpy = dlsym( RTLD_NEXT, "memcpy");
+    if(NULL != original_memcpy)
+    {
+        printf("here is overwritten memcpy\n");
+        printf("dest %s\n", src);
+        return original_memcpy(dest, src, n);
+    }
+
+    perror("faild find dsym\n");
+    return 0;
+}

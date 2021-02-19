@@ -14,6 +14,7 @@ void *thread_func(void *argv)
 }
 int main(void)
 {
+#if 0
     pthread_t pt1;
     void **retval;
     printf("random number is %d\n", rand());
@@ -27,6 +28,10 @@ int main(void)
         printf("pthread join failed\n");
         return -1;
     }
-
     pthread_exit(NULL);
+#endif
+    char a[10] = {0};
+
+    memcpy(a, "abc", 3);
+
 }
